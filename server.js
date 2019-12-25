@@ -54,7 +54,11 @@ app.use(morgan('combined')) // use 'tiny' or 'combined'
 // App Routes - Auth
 app.get('/', (req, res) => res.send('hello world'))
 app.get('/getAllUsers', (req, res) => main.getTableData(req, res, db))
+// called from frontend addEditForm component
+// send response and add new user to state of all users
 app.post('/createNewUser', (req, res) => main.postTableData(req, res, db))
+// called from frontend addEditForm component
+// send response and update state of all users
 app.put('/editUser', (req, res) => main.putTableData(req, res, db))
 // called from frontend dataTable component
 // send response to userInfo component - filter items
