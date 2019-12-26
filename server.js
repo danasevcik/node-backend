@@ -30,6 +30,7 @@ var db = require('knex')({
 });
 
 // Controllers - aka, the db queries
+// import fcns from main.js
 const main = require('./controllers/main')
 
 // App
