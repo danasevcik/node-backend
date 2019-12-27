@@ -34,9 +34,11 @@ var db = require('knex')({
 const main = require('./controllers/main')
 
 // App
+// var for express
 const app = express()
 
 // App Middleware
+// run backend on 3000, frontend on 3001
 const whitelist = ['http://localhost:3001']
 const corsOptions = {
   origin: function (origin, callback) {
